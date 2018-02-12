@@ -1,0 +1,46 @@
+# http://EditorConfig.org
+# https://gds-way.cloudapps.digital/manuals/programming-languages/editorconfig
+# Copy into project root and rename to .editorconfig
+
+# uncomment if top-most EditorConfig file
+# root = true
+
+[*.scss]
+indent_size = 2
+indent_style = space
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.html]
+indent_size = 2
+indent_style = space
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.css]
+indent_size = 2
+indent_style = space
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.js]
+indent_size = 2
+indent_style = space
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.json]
+indent_size = 2
+indent_style = space
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true

@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+{% from "form/checkbox.html" import checkbox %}
+
+{% block content %}
+
+<main>
+  <aside>
+    {% include 'section/devices.html' %}
+  </aside>
+
+  <section>
+    <h1 class="smartphone">Google Pixel</h1>
+
+    <ul>
+      <li>
+        <a href="#control">Control</a>
+      </li>
+      <li>
+        <a href="#permissions" class="active">Permissions</a>
+      </li>
+    </ul>
+
+    <div id="control">
+
+    </div>
+
+    <div id="permissions" class="active">
+      {% include 'section/permissions.html' %}
+    </div>
+  </section>
+</main>
+
+<!-- <footer>
+  <p>Status</p>
+</footer> -->
+
+{% endblock %}

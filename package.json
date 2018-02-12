@@ -1,0 +1,62 @@
+{
+  "name": "og-desktop",
+  "version": "0.1.0",
+  "description": "The Great OG desktop GUI client.",
+  "main": "dist/app.js",
+  "scripts": {
+    "build": "gulp build",
+    "start": "electron .",
+    "start:dev": "gulp",
+    "test": "mocha **/*.spec.js",
+    "watch": "gulp watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paroxp/og-desktop.git"
+  },
+  "keywords": [
+    "og",
+    "manage",
+    "control",
+    "desktop",
+    "phone",
+    "volume",
+    "clipboard",
+    "notification",
+    "media"
+  ],
+  "author": {
+    "name": "Rafal Proszowski",
+    "email": "paroxp@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/paroxp/og-desktop/issues"
+  },
+  "homepage": "https://github.com/paroxp/og-desktop#readme",
+  "meta": {
+    "name": "Great and Powerful Og"
+  },
+  "xo": {
+    "space": true
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "electron": "^1.8.2",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.1",
+    "gulp-babel-minify": "^0.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-copy": "^1.1.0",
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-nunjucks": "^3.1.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "lodash": "^4.17.5",
+    "normalize.css": "^8.0.0",
+    "nunjucks": "^3.0.1",
+    "xo": "^0.18.2"
+  }
+}

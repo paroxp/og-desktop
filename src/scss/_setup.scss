@@ -1,0 +1,131 @@
+main > section {
+  display: flex;
+  flex-direction: column;
+  order: 1;
+  width: 70%;
+
+  h1 {
+    font-weight: 300;
+    margin: 0;
+    padding: 1rem;
+
+    &.laptop {
+      &:before {
+        @include img($platform-laptop, 2rem);
+      }
+    }
+
+    &.other {
+      &:before {
+        @include img($platform-other, 2rem);
+      }
+    }
+
+    &.pc {
+      &:before {
+        @include img($platform-pc, 2rem);
+      }
+    }
+
+    &.smartphone {
+      &:before {
+        @include img($platform-smartphone, 2rem);
+      }
+    }
+
+    &.tablet {
+      &:before {
+        @include img($platform-tablet, 2rem);
+      }
+    }
+
+    &.tv {
+      &:before {
+        @include img($platform-tv, 2rem);
+      }
+    }
+  }
+
+  ul {
+    display: block;
+    list-style: none;
+    margin: 0;
+    margin-bottom: .5rem;
+    padding: 0;
+    text-align: center;
+  }
+
+  ul > li {
+    display: inline-block;
+  }
+
+  ul > li > a {
+    border-bottom: 1px solid $white;
+    color: $navy;
+    display: block;
+    padding: .25rem .5rem;
+    text-decoration: none;
+    transition: all .3s ease;
+
+    &:hover, &:active, &:focus ,&.active {
+      border-bottom: 1px solid $blue;
+      outline: none;
+    }
+  }
+
+  > div {
+    display: none;
+    flex: 1 100%;
+
+    &.active {
+      display: flex;
+    }
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  form > div {
+    display: flex;
+    flex: 1 100%;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  form .group {
+    display: flex;
+    padding: 1rem;
+  }
+
+  form .group > label {
+    width: 80%;
+  }
+
+  form .group > label > small {
+    display: block;
+  }
+
+  form .group > label + div {
+    text-align: right;
+    width: 20%;
+  }
+
+  form > button {
+    @extend %button;
+
+    align-self: flex-end;
+    background-color: $blue;
+    border: 1px solid $blue;
+    color: $white;
+    line-height: 0;
+    padding: 1.562rem .75rem; // Hack all the pain away.
+    width: 100%;
+
+    &:hover, &:active, &:focus {
+      background-color: darken($blue, 5);
+    }
+  }
+}

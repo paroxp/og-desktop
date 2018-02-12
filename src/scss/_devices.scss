@@ -1,0 +1,82 @@
+main > aside {
+  background-color: rgba($silver, .5);
+  display: flex;
+  flex-direction: column;
+  order: 1;
+  width: 30%;
+
+  ul {
+    display: flex;
+    flex: 1 100%;
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  ul > li > a {
+    @extend %button;
+
+    background-color: $white;
+    border-bottom: 1px solid rgba($silver, .5);
+    border-right: 1px solid rgba($silver, .5);
+    color: $navy;
+    cursor: pointer;
+
+    &.active, &:active, &:hover, &:focus {
+      background-color: $blue;
+      border-color: rgba($navy, .25);
+    }
+
+    &.laptop {
+      &:before {
+        @include img($platform-laptop, 1rem);
+      }
+    }
+
+    &.other {
+      &:before {
+        @include img($platform-other, 1rem);
+      }
+    }
+
+    &.pc {
+      &:before {
+        @include img($platform-pc, 1rem);
+      }
+    }
+
+    &.smartphone {
+      &:before {
+        @include img($platform-smartphone, 1rem);
+      }
+    }
+
+    &.tablet {
+      &:before {
+        @include img($platform-tablet, 1rem);
+      }
+    }
+
+    &.tv {
+      &:before {
+        @include img($platform-tv, 1rem);
+      }
+    }
+  }
+
+  ul + a {
+    @extend %button;
+
+    align-self: flex-end;
+    background-color: $olive;
+    border-top: 1px solid rgba($olive, .5);
+    color: $white;
+    text-align: center;
+    width: 100%;
+
+    &:hover, &:active, &:focus {
+      background-color: darken($olive, 5);
+    }
+  }
+}

@@ -1,0 +1,4 @@
+{% macro checkbox(name, value='', dependee=false) %}
+  <span data-checkbox="{% if value|length %}true{% endif %}"></span>
+  <input type="checkbox" name="{{ name }}" {% if dependee %}data-dependee{% endif %} value="{% if value|length %}1{% endif %}">
+{% endmacro %}

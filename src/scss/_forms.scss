@@ -1,0 +1,41 @@
+[data-checkbox] {
+  background-color: $white;
+  border: 2px solid $silver;
+  color: $white;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.25rem;
+  height: 2.5rem;
+  padding: 0.25rem;
+  text-align: center;
+  transition: all .3s ease;
+  width: 2.5rem;
+
+  @include icon($og-tick) {
+    opacity: 0;
+    transition: all .3s ease;
+  }
+
+  &:hover, &:active, &:focus {
+    border-color: $blue;
+
+    &:before {
+      color: $blue;
+      opacity: 1;
+    }
+  }
+
+  &.active, &.active:hover, &[data-checkbox=true], &[data-checkbox=true]:hover {
+    background-color: $blue;
+    border-color: $blue;
+
+    &:before {
+      color: $white;
+      opacity: 1;
+    }
+  }
+
+  & + input[type=checkbox] {
+    display: none;
+  }
+}

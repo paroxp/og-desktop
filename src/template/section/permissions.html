@@ -1,0 +1,56 @@
+<form>
+  <div>
+    <div class="group">
+      <label>
+        Allow
+        <small>Allow that device to control this machine.</small>
+      </label>
+      <div>
+        {{ checkbox('enable', 'true', true) }}
+      </div>
+    </div>
+
+    <div class="group" data-require="enable">
+      <label>
+        Clipboard
+        <small>Allow that device to paste into this machine's clipboard.</small>
+      </label>
+      <div>
+        {{ checkbox('clipboard', 'true') }}
+      </div>
+    </div>
+
+    <div class="group" data-require="enable">
+      <label>
+          Media
+        <small>Allow that device to control media on this machine.</small>
+      </label>
+      <div>
+        {{ checkbox('media') }}
+      </div>
+    </div>
+
+    <div class="group" data-require="enable">
+      <label>
+        Notifications
+        <small>Allow that device to send notifications to this machine.</small>
+      </label>
+      <div>
+        {{ checkbox('notification', 'true') }}
+      </div>
+    </div>
+
+    <div class="group" data-require="enable">
+      <label>
+        Volume
+        <small>Allow that device to control volume on this machine.</small>
+      </label>
+      <div>
+        {{ checkbox('volume', 'true') }}
+      </div>
+    </div>
+
+  </div>
+
+  <button type="submit">Save</button>
+</form>

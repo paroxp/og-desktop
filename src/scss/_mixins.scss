@@ -1,0 +1,11 @@
+@mixin img($url, $size) {
+  background: url($url) no-repeat left center;
+  content: "";
+  display: inline-block;
+  height: $size;
+  margin-right: .5rem;
+  width: $size;
+  vertical-align: middle;
+
+  @content;
+}

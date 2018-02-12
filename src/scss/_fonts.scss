@@ -1,0 +1,46 @@
+@font-face {
+  font-family: "OG";
+  src: url("../fonts/og.eot");
+  src: url("../fonts/og.eot?#iefix") format("embedded-opentype"), url("../fonts/og.woff") format("woff"), url("../fonts/og.ttf") format("truetype"), url("../fonts/og.svg#OG") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "OG";
+    src: url("../fonts/og.svg#OG") format("svg");
+  }
+}
+
+@mixin icon($icon) {
+  &:before {
+    display: inline-block;
+    content: $icon;
+    font-family: "OG";
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-decoration: inherit;
+    text-rendering: optimizeLegibility;
+    text-transform: none;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+
+    @content;
+  }
+}
+
+$og-rewind: "\f100";
+$og-plus: "\f101";
+$og-minus: "\f102";
+$og-cross: "\f103";
+$og-stop: "\f104";
+$og-pause: "\f105";
+$og-next: "\f106";
+$og-previous: "\f107";
+$og-fast-forward: "\f108";
+$og-play: "\f109";
+$og-tick: "\f10a";
