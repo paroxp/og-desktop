@@ -38,6 +38,15 @@ body > main {
   flex-flow: row nowrap;
 }
 
+body > footer {
+  display: none;
+  font-size: .75rem;
+
+  &.active {
+    display: block;
+  }
+}
+
 ::-moz-selection { background-color: $purple; color: $white; }
 ::selection { background-color: $purple; color: $white; }
 

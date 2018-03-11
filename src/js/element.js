@@ -7,6 +7,24 @@ class Element {
     }
   }
 
+  addClass(className) {
+    this.assure(element => {
+      if (element.classList) {
+        element.classList.add(className);
+      } else {
+        const classes = element.className.split(' ');
+        const existingIndex = classes.indexOf(className);
+
+        if (existingIndex >= 0) {
+          return;
+        }
+
+        classes.push(className);
+        element.className = classes.join(' ');
+      }
+    });
+  }
+
   assure(action) {
     if (this.elements.length === 0) {
       return;
@@ -67,6 +85,39 @@ class Element {
         }
       }
     }
+  }
+
+  removeClass(className) {
+    this.assure(element => {
+      if (element.classList) {
+        element.classList.remove(className);
+      } else {
+        const classes = element.className.split(' ');
+        const existingIndex = classes.indexOf(className);
+
+        if (existingIndex >= 0) {
+          classes.splice(existingIndex, 1);
+        }
+      }
+    });
+  }
+
+  toggleClass(className) {
+    this.assure(element => {
+      if (element.classList) {
+        element.classList.toggle(className);
+      } else {
+        const classes = element.className.split(' ');
+        const existingIndex = classes.indexOf(className);
+
+        if (existingIndex >= 0) {
+          classes.splice(existingIndex, 1);
+        } else {
+          classes.push(className);
+          element.className = classes.join(' ');
+        }
+      }
+    });
   }
 
   trigger(eventName, data = {}) {
